@@ -1,0 +1,25 @@
+<h2>Current Recipe:</h2>
+<label for="current_name">Current Name:</label>
+<%= @recipe.name %>
+<br>
+<label for="current_ingredients">Current Ingredients:</label>
+<%= @recipe.ingredients %>
+<br>
+<label for="current_cook_time">Current Cook Time:</label>
+<%= @recipe.cook_time %>
+<br>
+<form action="/recipes/<%= @recipe.id %>" method="post">
+  <h2>Edit recipe:</h2>
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <label for="name">Title:</label>
+  <input id="name" type="text" name="name">
+  <br>
+  <label for="ingredients">Content:</label>
+  <input id="ingredients" type="text" name="ingredients">
+  <br>
+  <label for="cook_time">Cook Time:</label>
+  <input id="cook_time" type="text" name="cook_time">
+  <br>
+  <br>
+  <input type="submit" value="SUBMIT" id="Submit">
+</form>
