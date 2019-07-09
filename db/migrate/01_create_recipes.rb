@@ -1,10 +1,9 @@
-#Placeholder for a model
-class Recipe < ActiveRecord::Base
-   def change
+class CreateRecipes < ActiveRecord::Migration[5.2]
+  def change
     create_table :recipes do |t|
       t.string :name
       t.string :ingredients
       t.integer :cook_time
     end
   end
-end 
+end
